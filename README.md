@@ -4,24 +4,25 @@ This project focuses on predicting residential house prices using machine learni
 
 ## About the Project
 
-The dataset contains various features describing houses, such as overall quality, neighborhood, living area size, and year built. 
+The dataset contains various features describing houses, such as overall quality, neighborhood, living area size, and year built.
 
 To find the most accurate prediction pipeline, we compare three different categorical encoding strategies:
+
 - Ordinal Encoding
 - One-Hot Encoding
 - Target Encoding
 
-We test these encodings across two gradient boosting algorithms: Scikit-Learn's GradientBoostingRegressor and XGBoost.
+We test these encodings across two gradient boosting algorithms: Scikit-Learn's `GradientBoostingRegressor` and XGBoost.
 
 ## Project Workflow
 
 1. **Setup and Data Loading**: Load the training and testing datasets and inspect shapes and summary statistics.
-2. **Target Transformation**: Apply a natural logarithm transformation to SalePrice to normalize skewed price distributions.
+2. **Target Transformation**: Apply a natural logarithm transformation to `SalePrice` to normalize skewed price distributions.
 3. **Feature Separation**: Separate the numerical columns from categorical columns.
-4. **Preprocessing Pipelines**: Build ColumnTransformer pipelines combining median imputation for numerical data and different encoding methods for categorical variables.
-5. **Cross-Validation**: Evaluate each model and encoding combination using 5-fold cross-validation evaluated on Root Mean Squared Error (RMSE).
+4. **Preprocessing Pipelines**: Build `ColumnTransformer` pipelines combining median imputation for numerical data and different encoding methods for categorical variables.
+5. **Cross-Validation**: Evaluate each model and encoding combination using 5-fold cross-validation, evaluated on Root Mean Squared Error (RMSE).
 6. **Feature Importance**: Analyze the most impactful features driving price predictions.
-7. **Predictions and Submission**: Train the top-performing pipeline on the full training set and generate final predictions for test.csv.
+7. **Predictions and Submission**: Train the top-performing pipeline on the full training set and generate final predictions for `test.csv`.
 
 ## Repository Contents
 
@@ -34,26 +35,24 @@ We test these encodings across two gradient boosting algorithms: Scikit-Learn's 
 ## How to Run
 
 1. Clone this repository to your local machine:
+
 ```bash
-git clone https://github.com/lavignenancy/House-Pricing-Gradient-Boosting-Encoding.git
-cd House-Pricing-Gradient-Boosting-Encoding
+git clone https://github.com/gahirensengajolie/House-_Priciing.git
+cd House-_Priciing
+```
 
 2. Install the necessary packages:
+
+```bash
 pip install pandas numpy scikit-learn xgboost
+```
 
 3. Open and run the notebook:
+
+```bash
 jupyter lab house_prices.ipynb
+```
 
 ## Results Summary
 
 Using One-Hot Encoding and Target Encoding with XGBoost provided lower cross-validation error compared to standard ordinal encoding. Key features influencing house prices include overall quality, ground living area square footage, and neighborhood.
-
-
-
-
-
-
-
-
-
-
